@@ -31,7 +31,7 @@ jobs:
         EDITOR: false
         ENCRYPT_INI: false
         RELEASE: '1.0.0'
-        MAPS: 'Map1,Map2'
+        MAPS: 'TopDownMap'
         DELETE_PDB: true
 
     - name: Upload Build Artifact
