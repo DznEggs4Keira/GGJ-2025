@@ -17,7 +17,7 @@ jobs:
       uses: OrchidIsle/UE5-Build-Project@latest
       with:
         RUNUAT_PATH: 'E:/Unreal Editors/UE_5.3/Engine/Build/BatchFiles/RunUAT.bat'
-        UPROJECT_PATH: ${{ github.workspace }}/GGJ-2025/GGJ2025.uproject
+        UPROJECT_PATH: ${{ github.workspace }}/GGJ2025.uproject
         BUILD_CONFIG: Development
         PLATFORM: Win64
         CLEAN: true
