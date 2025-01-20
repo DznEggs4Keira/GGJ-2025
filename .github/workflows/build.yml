@@ -22,6 +22,7 @@ jobs:
         PLATFORM: Win64
         CLEAN: true
         COOK: true
+        BUILD: true
         STAGE: true
         PACKAGE: true
         PAK: true
