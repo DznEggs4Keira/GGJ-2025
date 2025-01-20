@@ -12,3 +12,5 @@ Theme for this year:
 - Leafy
 - Kris
 - Nils
+
+Theo read the readme
