@@ -1,0 +1,41 @@
+name: Build Unreal Engine Project
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Cook, Stage & Package UE Project
+      uses: OrchidIsle/UE5-Build-Project@latest
+      with:
+        RUNUAT_PATH: 'E:/Unreal Editors/UE_5.3/Engine/Build/BatchFiles/RunUAT.bat'
+        UPROJECT_PATH: ${{ github.workspace }}/GGJ-2025/GGJ2025.uproject
+        BUILD_CONFIG: Development
+        PLATFORM: Win64
+        CLEAN: true
+        COOK: true
+        STAGE: true
+        PACKAGE: true
+        PAK: true
+        ARCHIVE: true
+        ARCHIVE_PATH: ${{ github.workspace }}/Build/Archive
+        NULLRHI: false
+        EDITOR: false
+        ENCRYPT_INI: false
+        RELEASE: '1.0.0'
+        MAPS: 'Map1,Map2'
+        DELETE_PDB: true
+
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: GameBuild
+        path: ${{ github.workspace }}/Build/Archive
