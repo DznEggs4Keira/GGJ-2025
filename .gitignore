@@ -105,16 +105,7 @@ Build/Receipts
 *.temp
 
 # Ignore config files that should not be shared
-!Config/DefaultEditor.ini
-Config/DefaultEditorPerProjectUserSettings.ini
-!Config/DefaultEngine.ini
-!Config/DefaultGame.ini
-Config/DefaultInput.ini
-!Config/DefaultEditorSettings.ini
-Config/DefaultEditorUserSettings.ini
-Config/DefaultEditorPerProjectUserSettings.ini
-Config/DefaultGameUserSettings.ini
-Config/DefaultScalability.ini
+!Config/*
 
 # Ignore Unreal Engine version control
 *.p4s
