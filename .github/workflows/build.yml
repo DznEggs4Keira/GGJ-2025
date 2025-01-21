@@ -18,33 +18,6 @@ jobs:
         git lfs install
         git lfs pull
 
-    - name: Build UE Project
+    - name: Build, Cook, Stage & Package UE Project
       run: |
-        "E:/Unreal Editors/UE_5.3/Engine/Build/BatchFiles/RunUAT.bat" BuildCookRun -project="${{ github.workspace }}/GGJ2025.uproject" -noP4 -platform=Win64 -clientconfig=Development -serverconfig=Development -build -utf8output
-
-    - name: Cook, Stage & Package UE Project
-      uses: OrchidIsle/UE5-Build-Project@latest
-      with:
-        RUNUAT_PATH: 'E:/Unreal Editors/UE_5.3/Engine/Build/BatchFiles/RunUAT.bat'
-        UPROJECT_PATH: ${{ github.workspace }}/GGJ2025.uproject
-        BUILD_CONFIG: Development
-        PLATFORM: Win64
-        CLEAN: true
-        COOK: true
-        STAGE: true
-        PACKAGE: true
-        PAK: true
-        ARCHIVE: true
-        ARCHIVE_PATH: 'E:/Work/Projects/GGJ-2025/Build/Archive'
-        NULLRHI: false
-        EDITOR: false
-        ENCRYPT_INI: false
-        RELEASE: '1.0.0'
-        MAPS: 'TopDownMap'
-        DELETE_PDB: true
-
-    - name: Upload Build Artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: GameBuild
-        path: 'E:/Work/Projects/GGJ-2025/Build/Archive'
+        & "E:/Unreal Editors/UE_5.3/Engine/Build/BatchFiles/RunUAT.bat" BuildCookRun -project="${{ github.workspace }}/GGJ2025.uproject" -noP4 -platform=Win64 -clientconfig=Development -serverconfig=Development -build -cook -stage -pak -archive -archivedirectory="E:/Work/Projects/GGJ-2025/Build/Archive" -utf8output -map=TopDownMap
