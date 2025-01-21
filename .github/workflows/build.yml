@@ -13,6 +13,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Setup Git LFS
+      run: |
+        git lfs install
+        git lfs pull
+
+    - name: Build UE Project
+      run: |
+        "E:/Unreal Editors/UE_5.3/Engine/Build/BatchFiles/RunUAT.bat" BuildCookRun -project="${{ github.workspace }}/GGJ2025.uproject" -noP4 -platform=Win64 -clientconfig=Development -serverconfig=Development -build -utf8output
+
     - name: Cook, Stage & Package UE Project
       uses: OrchidIsle/UE5-Build-Project@latest
       with:
@@ -26,7 +35,7 @@ jobs:
         PACKAGE: true
         PAK: true
         ARCHIVE: true
-        ARCHIVE_PATH: 'E:\Work\Projects\GGJ-2025\Build\Archive'
+        ARCHIVE_PATH: 'E:/Work/Projects/GGJ-2025/Build/Archive'
         NULLRHI: false
         EDITOR: false
         ENCRYPT_INI: false
@@ -38,4 +47,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: GameBuild
-        path: 'E:\Work\Projects\GGJ-2025\Build\Archive'
+        path: 'E:/Work/Projects/GGJ-2025/Build/Archive'
