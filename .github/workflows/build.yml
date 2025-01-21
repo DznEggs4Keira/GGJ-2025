@@ -22,12 +22,11 @@ jobs:
         PLATFORM: Win64
         CLEAN: true
         COOK: true
-        BUILD: true
         STAGE: true
         PACKAGE: true
         PAK: true
         ARCHIVE: true
-        ARCHIVE_PATH: ${{ github.workspace }}/Build/Archive
+        ARCHIVE_PATH: 'E:\Work\Projects\GGJ-2025\Build\Archive'
         NULLRHI: false
         EDITOR: false
         ENCRYPT_INI: false
@@ -39,4 +38,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: GameBuild
-        path: ${{ github.workspace }}/Build/Archive
+        path: 'E:\Work\Projects\GGJ-2025\Build\Archive'
