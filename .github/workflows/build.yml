@@ -21,9 +21,3 @@ jobs:
     - name: Build, Cook, Stage & Package UE Project
       run: |
         & "E:/Unreal Editors/UE_5.3/Engine/Build/BatchFiles/RunUAT.bat" BuildCookRun -project="${{ github.workspace }}/GGJ2025.uproject" -noP4 -platform=Win64 -clientconfig=Development -serverconfig=Development -build -cook -stage -pak -archive -archivedirectory="E:/Work/Projects/GGJ-2025/Build/Archive" -utf8output -map=TopDownMap
-
-    - name: Upload Build Artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: GameBuild
-        path: 'E:/Work/Projects/GGJ-2025/Build/Archive'
