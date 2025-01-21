@@ -20,4 +20,4 @@ jobs:
 
     - name: Build, Cook, Stage & Package UE Project
       run: |
-        & "E:/Unreal Editors/UE_5.3/Engine/Build/BatchFiles/RunUAT.bat" BuildCookRun -project="${{ github.workspace }}/GGJ2025.uproject" -noP4 -platform=Win64 -clientconfig=Development -build -cook -stage -pak -archive -archivedirectory="E:/Work/Projects/GGJ-2025/Build/Archive" -utf8output
+       & "E:/Unreal Editors/UE_5.3/Engine/Build/BatchFiles/RunUAT.bat" BuildCookRun -project="${{ github.workspace }}/GGJ2025.uproject" -noP4 -platform=Win64 -clientconfig=Development -build -cook -stage -pak -archive -archivedirectory="E:/Work/Projects/GGJ-2025/Build/Archive" -utf8output
