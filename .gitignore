@@ -1,10 +1,9 @@
 # Visual Studio 2015 user specific files
 .vs/
 
-# Automated Builds Command
-.py
-
 # Compiled Object files
+*.slo
+*.lo
 *.o
 *.obj
 
@@ -21,6 +20,8 @@
 *.mod
 
 # Compiled Static libraries
+*.lai
+*.la
 *.a
 *.lib
 
@@ -35,6 +36,7 @@
 *.xcworkspace
 *.sln
 *.suo
+*.opensdf
 *.sdf
 *.VC.db
 *.VC.opendb
@@ -45,7 +47,7 @@ SourceArt/**/*.tga
 
 # Binary Files
 Binaries/*
-Plugins/*/Binaries/*
+Plugins/**/Binaries/*
 
 # Builds
 Build/*
@@ -66,54 +68,7 @@ Saved/*
 
 # Compiled source files for the engine to use
 Intermediate/*
-Plugins/*/Intermediate/*
+Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
-
-# Ignore Visual Studio files
-*.VC.db
-*.VC.VC.opendb
-*.sln
-*.suo
-*.vcxproj*
-*.xcodeproj
-*.xcworkspace
-*.xcuserdata
-
-# Ignore macOS files
-.DS_Store
-
-# Ignore Windows thumbnail cache files
-Thumbs.db
-
-# Ignore build receipts
-Build/Receipts
-
-# Ignore user-specific settings
-*.userprefs
-*.user
-
-# Ignore logs
-*.log
-
-# Ignore backup files
-*.bak
-
-# Ignore temporary files
-*.tmp
-*.temp
-
-# Ignore config files that should not be shared
-!Config/*
-
-# Ignore Unreal Engine version control
-*.p4s
-*.p4ignore
-*.p4config
-
-# Ignore private keys and certificates
-*.pem
-*.key
-*.crt
-*.csr
