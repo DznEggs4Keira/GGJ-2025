@@ -25,4 +25,4 @@ jobs:
         PROJECT_PATH: 'E:\Work\Projects\GGJ-2025\GGJ2025.uproject'
         OUTPUT_PATH: 'E:\Work\Projects\GGJ-2025\Build\Archive'
       run: |
-        & "$env:UAT_PATH" BuildCookRun -project="$env:PROJECT_PATH" -noP4 -platform=Win64 -clientconfig=Development -serverconfig=Development -cook -build -stage -pak -archive -archivedirectory="$env:OUTPUT_PATH"
+        & "$env:UAT_PATH" BuildCookRun -project="$env:PROJECT_PATH" -noP4 -platform=Win64 -clientconfig=Shipping -serverconfig=Shipping -cook -build -stage -pak -archive -archivedirectory="$env:OUTPUT_PATH"
