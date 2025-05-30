@@ -3,7 +3,7 @@
 
 Global Game Jam Entry for the year 2025
 
-Theme for this year:
+Theme for this year: BUBBLES
 
 ## Team Members:
 - Jinx
@@ -12,5 +12,3 @@ Theme for this year:
 - Leafy
 - Kris
 - Nils
-
-Theo read the readme
